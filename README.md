@@ -2,6 +2,14 @@
 
 Attempting to convert the `SwiftFetchedResultsController` pod (part of [`RBQFetchedResultsController`](https://github.com/Roobiq/RBQFetchedResultsController)) to Swift 3 and ran into what seems to be a bug in either Xcode, the swift compiler or both.
 
+## Project Setup
+
+This repo has [`realm-cocoa`](https://github.com/realm/realm-cocoa) added as a submodule. Run the following command before attempting to build the project in Xcode.
+
+```
+git submodule update --init
+```
+
 ## Before
 
 ```swift
