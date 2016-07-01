@@ -27,6 +27,16 @@ git submodule update --init
 
 ## After manual conversion
 
+In the updated Swift 3 compatible RealmSwift API the method in question has the following signature.
+
+```swift
+public final class Realm {
+  public func allObjects<T: Object>(ofType type: T.Type) -> Results<T>
+}
+```
+
+Manually converting the callsite yields the following code, which should compile, but instead gives new errors.
+
 ```swift
     public func fetchObjects() -> Results<T> {
 
@@ -35,7 +45,6 @@ git submodule update --init
 ```
 
 ### 2 errors
-
 
 ![](images/3-errors.png)
 ![](images/4-errors.png)
@@ -52,6 +61,8 @@ FetchRequest.swift:108:49: error: missing argument label 'ofType:' in call
 ```
 
 ### Fix-it
+
+The fix-it for the above errors generates the following invalid code.
 
 ```swift
 var fetchResults = self.realm.allObjectsofType: (ofType: T.Type)
