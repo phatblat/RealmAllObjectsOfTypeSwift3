@@ -13,7 +13,7 @@ public class FetchRequest<T: Object> {
      */
     public func fetchObjects() -> Results<T> {
 
-        let fetchResults = self.realm.allObjects(ofType: T.Type)
+        let fetchResults = self.realm.allObjects(ofType: T.self)
 
         return fetchResults
     }
