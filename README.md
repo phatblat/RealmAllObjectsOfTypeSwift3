@@ -1,5 +1,7 @@
 > This a sample project demonstrating the issues logged in [rdar://27141382](http://www.openradar.me/27141382)
 
+**Update:** This issue was resolved in Xcode 8 beta 2 (8S162m)
+
 # Realm SwiftFetchedResultsController conversion to Swift 3 - issues
 
 Attempting to convert the `SwiftFetchedResultsController` pod (part of [`RBQFetchedResultsController`](https://github.com/Roobiq/RBQFetchedResultsController)) to Swift 3 and ran into what seems to be a bug in either Xcode, the swift compiler or both.
